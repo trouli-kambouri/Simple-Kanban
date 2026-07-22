@@ -43,7 +43,15 @@ function drop(e) {
 
     if (e.target.classList.contains("task-list")) {
         e.target.appendChild(task);
+        if (e.target.id === "done") 
+        {
+            task.classList.add("completed");
+        } else 
+        {
+            task.classList.remove("completed");
+        }
     }
+
 }
 
 document.getElementById("addtask").addEventListener("keypress", function(e){
