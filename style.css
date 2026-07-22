@@ -58,7 +58,7 @@ h3
 .add-task button 
 {
     padding: 10px 20px;
-    background: #0078ff;
+    background: #871477;
     color: white;
     border: none;
     border-radius: 5px;
@@ -83,7 +83,7 @@ h3
 {
     width: 300px;
     min-height: 500px;
-    background: pink;
+    background: #871477;
     border-radius: 10px;
     padding: 15px;
     box-shadow: 0 3px 10px rgba(0,0,0,.1);
@@ -103,7 +103,7 @@ h3
 .task 
 {
     background: white;
-    border-left: 5px solid #0078ff;
+    border-left: 5px solid #871477;
     padding: 12px;
     margin-bottom: 12px;
     border-radius: 6px;
