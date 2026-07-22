@@ -8,14 +8,18 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [ ] Create a List
 - [ ] Name a List
 - [ ] Delete a List
+(_currently, all lists are static_)
 - [x] Create a Task
-- [ ] Edit a Task
-- [ ] Drag and Drop a Task
+- [ ] Edit a Task 
+(_currently, you can delete a task, and create a new task_)
+- [x] Drag and Drop a Task
 - [x] Delete a Task
 - [ ] Choose a Board Background Colour
 - [ ] Choose a List Colour
+(_may implement colour themes instead_)
 - [ ] Check Tasks as "Done"
-- [ ] Grey out or strikethrough "Done" Tasks
+(_not sure if this is currently necessary; as currently using automatic strikethrough when in the "DONE" column_)
+- [x] Grey out or strikethrough "Done" Tasks
 
 Nice to haves:
 - [ ] Create Team Members
