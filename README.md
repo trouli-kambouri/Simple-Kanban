@@ -22,6 +22,7 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Grey out and/or strikethrough "Done" Tasks
 
 Nice to haves:
+- [ ] Change to Dark Mode
 - [ ] Create Team Members
 - [ ] Assign Team Members to Tasks
 
