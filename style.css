@@ -1,11 +1,14 @@
-body {
-    overflow-x: auto;
+
+
+h1 
+{
+    color: white;
+    text-align: centre
 }
 
-.task {
-    transition: transform 0.2s;
-}
-
-.task:hover {
-    transform: scale(1.02);
+h2
+{
+    color: white;
+    text-align: centre;
+    font: italic
 }
