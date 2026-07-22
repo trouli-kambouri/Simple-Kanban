@@ -56,6 +56,11 @@ h3
     border: 1px solid #ccc;
 }
 
+.add-task input:focus 
+{
+    border: 1px solid #b388eb;
+}
+
 .add-task button 
 {
     padding: 10px 20px;
@@ -68,7 +73,7 @@ h3
 
 .add-task button:hover 
 {
-    background: #bde0fe;
+    background: #945bdf;
 }
 
 .board 
@@ -147,7 +152,7 @@ h3
 .task 
 {
     background: white;
-    border-left: 5px solid #b388eb;
+    border-left: 5px solid #e4c1f9;
     padding: 12px;
     margin-bottom: 12px;
     border-radius: 6px;
