@@ -2,7 +2,7 @@ let taskId = 0;
 
 function addTask() {
 
-    const input = document.getElementById("taskInput");
+    const input = document.getElementById("addtask");
 
     const text = input.value.trim();
 
@@ -15,6 +15,11 @@ function addTask() {
     task.id = "task-" + taskId++;
 
     task.addEventListener("dragstart", drag);
+
+    task.innerHTML = `
+    <span>${text}</span>
+    <button class="delete" onclick="this.parentElement.remove()">×</button>
+    `;
 
     document.getElementById("todo").appendChild(task);
 
@@ -41,7 +46,7 @@ function drop(e) {
     }
 }
 
-document.getElementById("taskInput").addEventListener("keypress", function(e){
+document.getElementById("addtask").addEventListener("keypress", function(e){
     if(e.key==="Enter"){
         addTask();
     }
