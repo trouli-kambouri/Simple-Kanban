@@ -1,0 +1,11 @@
+body {
+    overflow-x: auto;
+}
+
+.task {
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: scale(1.02);
+}
