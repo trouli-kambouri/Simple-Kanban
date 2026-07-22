@@ -16,11 +16,6 @@ function addTask() {
 
     task.addEventListener("dragstart", drag);
 
-    task.innerHTML = `
-        <span>${text}</span>
-        <button class="delete" onclick="this.parentElement.remove()">×</button>
-    `;
-
     document.getElementById("todo").appendChild(task);
 
     input.value = "";
