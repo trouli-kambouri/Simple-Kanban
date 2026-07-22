@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Your Kanban Board</title>
 
     <link rel="stylesheet" href="style.css">
@@ -11,10 +12,50 @@
     <h1> My Board </h1>
     <h2> Made by Trouli </h2>
 
-    <h3> List 1 </h3>
     <h3> List 2 </h3>
     <h3> List 3 </h3>
     <h3> List 4 </h3>
+
+<div class = "add-task">
+    <input type="text" id="addtask" placeholder="Add a task">
+    <button onclick="addTask()">Add Task</button>
+</div>
+
+<div class = "kanban-board">
+    <div class = "column1">
+        <h3> Backlog (To Do) </h3>
+        <div class = "task-list" 
+            id = "todo" 
+            ondrop = "drop(event)" 
+            ondragover = "allowDrop(event)">
+        </div>
+    </div>
+    <div class = "column2">
+        <h3> Current Sprint </h3>
+        <div class = "task-list" 
+            id = "current" 
+            ondrop = "drop(event)" 
+            ondragover = "allowDrop(event)">
+        </div>
+    </div>
+    <div class = "column3">
+        <h3> In Progress </h3>
+        <div class = "task-list" 
+            id = "progress" 
+            ondrop = "drop(event)" 
+            ondragover = "allowDrop(event)">
+        </div>
+    </div>
+        <div class = "column4">
+        <h3> DONE </h3>
+        <div class = "task-list" 
+            id = "done" 
+            ondrop = "drop(event)" 
+            ondragover = "allowDrop(event)">
+        </div>
+    </div>
+</div>
     
+<script src="script.js"></script>
 </body>
 </html>
