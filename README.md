@@ -8,10 +8,10 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [ ] Create a List
 - [ ] Name a List
 - [ ] Delete a List
-- [ ] Create a Task
+- [x] Create a Task
 - [ ] Edit a Task
 - [ ] Drag and Drop a Task
-- [ ] Delete a Task
+- [x] Delete a Task
 - [ ] Choose a Board Background Colour
 - [ ] Choose a List Colour
 - [ ] Check Tasks as "Done"
