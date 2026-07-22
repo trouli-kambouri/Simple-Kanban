@@ -18,7 +18,7 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [ ] Choose a List Colour
 (_may implement colour themes instead_)
 - [ ] Check Tasks as "Done"
-(_not sure if this is currently necessary; as currently using automatic strikethrough when in the "DONE" column_)
+(_not sure if this is currently necessary;using automatic strikethrough when in the "DONE" column_)
 - [x] Grey out or strikethrough "Done" Tasks
 
 Nice to haves:
