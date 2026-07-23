@@ -1,7 +1,8 @@
 
-
-
-
+/* 
+This is the setup for the users table and the tasks table in our database 
+Enter psql then copy and paste to create the tables.
+*/
 
 CREATE TABLE users 
 (
