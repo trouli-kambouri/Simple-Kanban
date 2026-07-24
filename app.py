@@ -27,10 +27,10 @@ def register():
     try:
         UserRepository.create(new_user)
         flash("Sign up successful!", "success")
-        return redirect('/users/login')
+        return redirect('/login')
     except ValueError as e:
         flash(str(e), "error")
-        return redirect("/users/new")
+        return redirect("/register")
     return None
 
 @app.route("/login", methods = ['GET'])
