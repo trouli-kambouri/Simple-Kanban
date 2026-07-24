@@ -19,7 +19,6 @@ class UserRepository():
             raise ValueError(
                 "Your name is already logged! Please log in " + user.name + " :). Or, choose a new name for a new account."
             )
-        
         self._connection.execute
         (
             "INSERT INTO users (name, password_hash) "
