@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    {% include "nav_bar.html" %} <!-- Adds navigation bar -->
+    <!-- 
+    {% include "nav_bar.html" %} Adds navigation bar -->
         <h1> My Board </h1>
         <h2> Made by Trouli </h2>
 
@@ -55,6 +56,6 @@
             </div>
         </div>
     
-        <script src="script.js"></script>
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>
