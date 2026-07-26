@@ -1,3 +1,4 @@
+'''
 from lib.user import User
 
 class UserRepository():
@@ -43,3 +44,4 @@ class UserRepository():
             return None
         user = result[0]
         return User(user["name"], user["password_hash"], user["id"])
+        '''

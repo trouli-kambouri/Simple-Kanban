@@ -1,3 +1,4 @@
+'''
 import os, psycopg
 from flask import Flask
 from psycopg.rows import dict_row
@@ -60,3 +61,4 @@ def get_flask_database_connection(app):
         )
         g.flask_database_connection.connect()
     return g.flask_database_connection
+    '''

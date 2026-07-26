@@ -1,3 +1,4 @@
+'''
 from lib.task import Task
 
 class TaskRepository():
@@ -16,3 +17,4 @@ class TaskRepository():
     def remove(self, id):
         self._connection.execute("DELETE FROM tasks WHERE id = %s", [id])
         return None
+'''

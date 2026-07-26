@@ -1,3 +1,4 @@
+'''
 class Task():
     def __init__(self, task, task_status, id=None):
         self.task = task
@@ -10,3 +11,4 @@ def __repr__(self):
 
 def __eq__(self, other):
     return self.__dict__ == other.__dict__
+    '''
