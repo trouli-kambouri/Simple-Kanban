@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    color: white;
 }
 
 body
@@ -26,6 +25,7 @@ h1
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
     padding: 24px;
+    color: white;
 }
 
 h2
@@ -35,14 +35,16 @@ h2
     font-style: italic;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
     padding: 24px;
+    color: white;
 }
 
 h3
 {
-    font-size: 26px;
+    font-size: 18px;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
     padding: 16px;
+    color: white;
 }
 
 .add-task 
