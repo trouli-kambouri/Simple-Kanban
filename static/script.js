@@ -1,6 +1,4 @@
 
-alert("Hello Mummy! You're the Best! - Trouli")
-
 let tasks = [];
 let taskId = 0;
 
@@ -173,3 +171,5 @@ document.getElementById("addtask").addEventListener("keypress", function(e)
     }
 });
 loadTasks();
+
+alert("Hello Mummy! You're the Best! - Trouli")
