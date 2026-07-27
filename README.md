@@ -17,7 +17,3 @@ To implement:
 - [ ] Colour-coded tasks based on easy-medium-hard
 - [ ] Capitalise all column titles
 - [ ] Insert a countdown for the Right Now column that looks like a clock, that looks like this one: https://visualtimer.com/ and is next to the title.
-
-Future ideas:
-- [ ] Adding a backend with user accounts.
-<br>(_GitHub pages cannot host the backend, so currently some backend is written but not in use_)
