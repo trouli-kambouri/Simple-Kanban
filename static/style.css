@@ -175,7 +175,7 @@ h3
     width: 12px;
     height: 100vh;
     cursor: pointer;
-    background: green;
+    background:	#baffc9;
     transition: width 0.2s;
 }
 

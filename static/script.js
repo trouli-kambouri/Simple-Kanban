@@ -26,7 +26,7 @@ function loadTasks()
     {
     if (!task.colour) 
     {
-        task.colour = "green";
+        task.colour = "#baffc9";
     }
     });
     renderBoard();
@@ -77,7 +77,7 @@ function addTask()
         id: taskId++,
         text: text,
         column: "todo",
-        colour: "green"
+        colour: "#baffc9"
     });
 
     input.value = "";
@@ -156,9 +156,9 @@ function changeTaskColour(id)
     if (!task) return;
     const colours = 
     [
-        "green",
-        "gold",
-        "hotpink"
+        "#baffc9",
+        "#ffffba",
+        "#ffb3ba"
     ];
     let index = colours.indexOf(task.colour);
     if (index === -1) index = 0;
