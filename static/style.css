@@ -173,10 +173,11 @@ h3
 .task-colour
 {
     width: 12px;
-    height: 100vh;
+    align-self: stretch;
     cursor: pointer;
     background:	#baffc9;
     transition: width 0.2s;
+    flex-shrink: 0;
 }
 
 .task-colour:hover
@@ -189,7 +190,7 @@ h3
     flex: 1;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     padding: 12px;
 }
 
