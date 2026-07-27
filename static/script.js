@@ -1,72 +1,7 @@
-/*
-let taskId = 0;
-
-function addTask() {
-
-    const input = document.getElementById("addtask");
-
-    const text = input.value.trim();
-
-    if (text === "") return;
-
-    const task = document.createElement("div");
-
-    task.className = "task";
-    task.draggable = true;
-    task.id = "task-" + taskId++;
-
-    task.addEventListener("dragstart", drag);
-
-    task.innerHTML = `
-    <span>${text}</span>
-    <button class="delete" onclick="this.parentElement.remove()">×</button>
-    `;
-
-    document.getElementById("todo").appendChild(task);
-
-    input.value = "";
-}
-
-function allowDrop(e) {
-    e.preventDefault();
-}
-
-function drag(e) {
-    e.dataTransfer.setData("text", e.target.id);
-}
-
-function drop(e) {
-    e.preventDefault();
-
-    const id = e.dataTransfer.getData("text");
-
-    const task = document.getElementById(id);
-
-    if (e.target.classList.contains("task-list")) {
-        e.target.appendChild(task);
-        if (e.target.id === "done") 
-        {
-            task.classList.add("completed");
-        } else 
-        {
-            task.classList.remove("completed");
-        }
-    }
-
-}
-
-document.getElementById("addtask").addEventListener("keypress", function(e){
-    if(e.key==="Enter"){
-        addTask();
-    }
-});
-*/
-
-alert("Hello Mummy! -Trouli");
+alert("Hello Mummy! You're the Best! - Trouli")
 
 let tasks = [];
 let taskId = 0;
-
 
 function saveTasks() {
     localStorage.setItem("kanbanTasks", JSON.stringify(tasks));
@@ -99,13 +34,12 @@ function renderBoard() {
         const taskElement = document.createElement("div");
 
         taskElement.className = "task";
+        taskElement.id = "task-" + task.id;
+        taskElement.draggable = true;
 
         if (task.column === "done") {
             taskElement.classList.add("completed");
         }
-
-        taskElement.draggable = true;
-        taskElement.id = "task-" + task.id;
 
         taskElement.addEventListener("dragstart", drag);
 
@@ -115,6 +49,7 @@ function renderBoard() {
         `;
 
         document.getElementById(task.column).appendChild(taskElement);
+
     });
 
 }
@@ -136,6 +71,7 @@ function addTask() {
 
     saveTasks();
     renderBoard();
+
 }
 
 function deleteTask(id) {
@@ -144,6 +80,7 @@ function deleteTask(id) {
 
     saveTasks();
     renderBoard();
+
 }
 
 function allowDrop(e) {
@@ -151,27 +88,68 @@ function allowDrop(e) {
 }
 
 function drag(e) {
-    e.dataTransfer.setData("text", e.target.id);
+    e.dataTransfer.setData("text/plain", e.currentTarget.id);
 }
 
 function drop(e) {
 
     e.preventDefault();
 
-    const htmlId = e.dataTransfer.getData("text");
-    const id = parseInt(htmlId.replace("task-", ""));
+    const draggedHtmlId = e.dataTransfer.getData("text/plain");
+    const draggedId = parseInt(draggedHtmlId.replace("task-", ""));
 
-    if (!e.target.classList.contains("task-list"))
-        return;
+    const draggedTask = tasks.find(t => t.id === draggedId);
 
-    const task = tasks.find(t => t.id === id);
+    if (!draggedTask) return;
 
-    if (task) {
-        task.column = e.target.id;
+    const column = e.target.closest(".task-list");
 
-        saveTasks();
-        renderBoard();
+    if (!column) return;
+
+    const columnId = column.id;
+
+    // Remove dragged task from array
+    const oldIndex = tasks.findIndex(t => t.id === draggedId);
+    tasks.splice(oldIndex, 1);
+
+    draggedTask.column = columnId;
+
+    const targetTaskElement = e.target.closest(".task");
+
+    // Dropped into empty space
+    if (!targetTaskElement) {
+
+        let insertIndex = tasks.length;
+
+        // Place after the last task in this column
+        for (let i = tasks.length - 1; i >= 0; i--) {
+            if (tasks[i].column === columnId) {
+                insertIndex = i + 1;
+                break;
+            }
+        }
+
+        tasks.splice(insertIndex, 0, draggedTask);
+
+    } else {
+
+        const targetId = parseInt(targetTaskElement.id.replace("task-", ""));
+        const targetIndex = tasks.findIndex(t => t.id === targetId);
+
+        const rect = targetTaskElement.getBoundingClientRect();
+
+        const before =
+            e.clientY < rect.top + rect.height / 2;
+
+        const insertIndex = before ? targetIndex : targetIndex + 1;
+
+        tasks.splice(insertIndex, 0, draggedTask);
+
     }
+
+    saveTasks();
+    renderBoard();
+
 }
 
 document.getElementById("addtask").addEventListener("keypress", function(e) {
