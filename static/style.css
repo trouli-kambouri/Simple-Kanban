@@ -60,6 +60,9 @@ h3
 .add-task input:focus 
 {
     border: 1px solid #b388eb;
+    outline: none;
+    border: 2px solid #b388eb;
+    box-shadow: 0 0 12px #b388eb;
 }
 
 .add-task button 
