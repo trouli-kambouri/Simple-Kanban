@@ -14,6 +14,6 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Saves tasks locally
 
 To implement:
-- [ ] Colour-coded tasks based on easy-medium-hard
+- [x] Colour-coded tasks based on easy-medium-hard
 - [x] Capitalise all column titles
 - [ ] Insert a countdown for the Right Now column that looks like a clock, that looks like this one: https://visualtimer.com/ and is next to the title.
