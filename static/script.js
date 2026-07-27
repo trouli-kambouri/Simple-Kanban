@@ -62,6 +62,8 @@ document.getElementById("addtask").addEventListener("keypress", function(e){
 });
 */
 
+alert("Hi! I'm working!");
+
 let tasks = [];
 let taskId = 0;
 
