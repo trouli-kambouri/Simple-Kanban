@@ -173,9 +173,8 @@ h3
 .task-colour
 {
     width: 12px;
-    align-self: stretch;
+    height: 100vh;
     cursor: pointer;
-    flex-shrink: 0;
     background: green;
     transition: width 0.2s;
 }
