@@ -15,4 +15,4 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Colour-coded tasks, based on easy-medium-hard
 
 To implement:
-- [ ] Insert a countdown for the Right Now column that looks like a clock, that looks like this one: https://visualtimer.com/ and is next to the title.
+- [ ] Insert a countdown for the Right Now column that looks like a clock, like this one: https://visualtimer.com/ next to the title.
