@@ -63,7 +63,8 @@ function addTask()
     tasks.push({
         id: taskId++,
         text: text,
-        column: "todo"
+        column: "todo",
+        colour: green
     });
 
     input.value = "";
@@ -133,6 +134,22 @@ function drop(e)
         const insertIndex = before ? targetIndex : targetIndex + 1;
         tasks.splice(insertIndex, 0, draggedTask);
     }
+    saveTasks();
+    renderBoard();
+}
+function changeTaskColour(id) 
+{
+    const task = tasks.find(t => t.id === id);
+    if (!task) return;
+    const colours = 
+    [
+        "green",
+        "gold",
+        "hotpink"
+    ];
+    let index = colours.indexOf(task.colour);
+    if (index === -1) index = 0;
+    task.colour = colours[(index + 1) % colours.length];
     saveTasks();
     renderBoard();
 }
