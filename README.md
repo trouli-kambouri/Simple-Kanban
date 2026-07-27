@@ -7,14 +7,17 @@ From a personal development standpoint, it is a first introduction to JavaScript
 The web application is intended to be a functioning Kanban board, with the following main features:
 - [x] Static Kanban Lists
 - [x] Create a Task
-- [ ] Edit a Task 
-<br>(_currently, you can delete a task, and create a new task_)
+<br>(_currently, there is no edit task, but you can delete a task and create a new task easily_)
 - [x] Delete a Task
 - [x] Drag and Drop a Task
 - [x] Grey out and strikethrough "Done" Tasks
+- [x] Saves tasks locally
 
-Nice to haves:
-- [ ] Dark Mode
+To implement:
+- [] Colour-coded tasks based on easy-medium-hard
+- [] Capitalise all column titles
+- [] Insert a countdown for the Right Now column that looks like a clock, that looks like this one: https://visualtimer.com/ and is next to the title.
+
 
 Future ideas:
 - [ ] Adding a backend with user accounts.
