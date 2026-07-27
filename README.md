@@ -13,6 +13,7 @@ The web application is intended to be a functioning Kanban board, with the follo
 - [x] Grey out and strikethrough "Done" Tasks
 - [x] Saves tasks locally
 - [x] Colour-coded tasks, based on easy-medium-hard
+- [x] Insert background
 
 To implement:
 - [ ] Insert a countdown for the Right Now column that looks like a clock, like this one: https://visualtimer.com/ next to the title.
