@@ -78,6 +78,7 @@ h3
 .add-task button:hover 
 {
     background: #945bdf;
+    transform: scale(1.02);
 }
 
 .board 
