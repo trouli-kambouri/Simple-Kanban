@@ -52,14 +52,14 @@ h3
     display: flex;
     justify-content: center;
     margin-bottom: 25px;
-    gap: 10px;
+    gap: 20px;
 }
 
 .add-task input 
 {
     width: 300px;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 10px;
     border: 1px solid #ccc;
 }
 
@@ -73,7 +73,7 @@ h3
 
 .add-task button 
 {
-    padding: 10px 20px;
+    padding: 20px 40px;
     background: #00a6ff;
     color: white;
     border: none;
