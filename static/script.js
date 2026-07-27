@@ -47,9 +47,15 @@ function renderBoard()
         taskElement.addEventListener("dragstart", drag);
 
         taskElement.innerHTML = `
-            <span>${task.text}</span>
-            <button class="delete" onclick="deleteTask(${task.id})">×</button>
+            <div class="task-colour"
+                onclick="changeTaskColour(${task.id})"></div>
+            <div class="task-content">
+                <span>${task.text}</span>
+                <button class="delete" onclick="deleteTask(${task.id})">×</button>
+            </div>
         `;
+        const colourStrip = taskElement.querySelector(".task-colour");
+        colourStrip.style.backgroundColor = task.colour;
         document.getElementById(task.column).appendChild(taskElement);
     });
 }
@@ -64,7 +70,7 @@ function addTask()
         id: taskId++,
         text: text,
         column: "todo",
-        colour: green
+        colour: "green"
     });
 
     input.value = "";
