@@ -6,11 +6,17 @@
     font-family: Arial, sans-serif;
 }
 
-body 
+body
 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../static/image.png');
     margin: 0;
     min-height: 100vh;
-    background-color: #e4c1f9;
+    background-size: cover;        /* Filling screen */
+    background-position: center;   /* Image centred */
+    background-attachment: fixed;
+    background-repeat: no-repeat;  /* No tiling */
+    text-align: center;
 }
 
 h1 

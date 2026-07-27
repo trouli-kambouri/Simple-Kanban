@@ -41,7 +41,6 @@ function renderBoard()
 
     tasks.forEach(task => 
     {
-
         const taskElement = document.createElement("div");
 
         taskElement.className = "task";
