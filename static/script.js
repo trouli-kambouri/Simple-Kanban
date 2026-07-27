@@ -22,6 +22,13 @@ function loadTasks()
     {
         taskId = parseInt(savedId);
     }
+    tasks.forEach(task => 
+    {
+    if (!task.colour) 
+    {
+        task.colour = "green";
+    }
+    });
     renderBoard();
 }
 
