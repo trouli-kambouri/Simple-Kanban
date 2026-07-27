@@ -115,7 +115,7 @@ h3
 
 .current h3
 {
-    background: #f9c74f;
+    background: #fff176;
 }
 
 .progress
@@ -141,9 +141,6 @@ h3
 .column h3
 {
     text-align: center;
-    /*
-    background: rgba(0,0,0,0.05);
-    */
     color: white;
     padding: 12px;
     border-radius: 8px;
@@ -197,8 +194,7 @@ h3
     opacity: 0.55;
     color: #666
 }
-
-/* Start of Nav Bar */
+/*
 .navigation_bar 
 {
     display: flex;
@@ -265,4 +261,4 @@ h3
 {
     background-color: rgba(255, 99, 71, 0.2)
 }
-/* End of Nav Bar */
+*/
