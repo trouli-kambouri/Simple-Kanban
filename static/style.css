@@ -165,9 +165,9 @@ h3
     padding: 0;
     margin-bottom: 12px;
     border-radius: 8px;
-    border-color:rgba(0,0,0,.5);
+    border-color:rgba(0,0,0,0.5);
     cursor: move;
-    box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
     display: flex;
     align-items: stretch;
     overflow: hidden; 
@@ -175,23 +175,23 @@ h3
 
 .task:hover 
 {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .task-colour
 {
-    width: 14px;
+    width: 16px;
     align-self: stretch;
     cursor: pointer;
     background:	#baffc9;
-    border-right: 1px solid rgba(0,0,0,0.15);
+    border-right: 0.5px rgba(0,0,0,0.1);
     transition: width 0.2s;
     flex-shrink: 0;
 }
 
 .task-colour:hover
 {
-    width: 16px;
+    width: 18px;
 }
 
 .task-content
