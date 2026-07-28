@@ -59,6 +59,7 @@ h3
 {
     width: 300px;
     padding: 20px;
+    font-size: 18px;
     border-radius: 10px;
     border: 1px solid #ccc;
 }
@@ -74,6 +75,7 @@ h3
 .add-task button 
 {
     padding: 20px 40px;
+    font-size: 18px;
     background: #00a6ff;
     color: white;
     border: none;
@@ -85,6 +87,12 @@ h3
 {
     background: #00a6ff;
     transform: scale(1.05);
+}
+
+.add-task input::placeholder
+{
+    font-size: 16px;
+    color: #999;
 }
 
 .board 
