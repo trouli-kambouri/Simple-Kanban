@@ -1,7 +1,6 @@
 
 let tasks = [];
 let taskId = 0;
-let completedTaskId = null;
 
 function saveTasks() 
 {
@@ -23,10 +22,10 @@ function loadTasks()
     }
     tasks.forEach(task => 
     {
-    if (!task.colour) 
-    {
-        task.colour = "#baffc9";
-    }
+        if (!task.colour) 
+        {
+            task.colour = "#baffc9";
+        }
     });
     renderBoard();
 }
@@ -43,17 +42,6 @@ function renderBoard()
         const taskElement = document.createElement("div");
 
         taskElement.className = "task";
-
-        if (task.id === completedTaskId)
-        {
-            taskElement.classList.add("complete-animation");
-
-            taskElement.addEventListener("animationend", () =>
-            {
-                completedTaskId = null;
-                taskElement.classList.remove("complete-animation");
-            }, { once: true });
-        }
         taskElement.id = "task-" + task.id;
         taskElement.draggable = true;
 
@@ -129,15 +117,7 @@ function drop(e)
 
     const oldIndex = tasks.findIndex(t => t.id === draggedId);
     tasks.splice(oldIndex, 1);
-
-    const previousColumn = draggedTask.column;
-
     draggedTask.column = columnId;
-
-    if (previousColumn !== "done" && columnId === "done")
-    {
-        completedTaskId = draggedTask.id;
-    }
     const targetTaskElement = e.target.closest(".task");
 
     if (!targetTaskElement) 
