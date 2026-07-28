@@ -183,7 +183,9 @@ h3
 
 .task:hover 
 {
-    transform: scale(1.01);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 8px 18px rgba(0,0,0,.18);
 }
 
 .task-colour
@@ -233,4 +235,29 @@ h3
     transition: opacity 0.3s ease;
     opacity: 0.7;
     color: #666
+}
+
+.task.complete-animation
+{
+    animation: taskComplete 0.7s ease;
+}
+
+@keyframes taskComplete
+{
+    0%
+    {
+        transform: scale(1);
+        box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    }
+
+    40%
+    {
+        transform: scale(1.08);
+        box-shadow: 0 0 25px rgba(128,237,153,.8);
+    }
+
+    100%
+    {
+        transform: scale(1);
+    }
 }
